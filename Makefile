@@ -1,11 +1,8 @@
 all: pepper samples
 
 pepper:
-	if wget -nc https://korpling.german.hu-berlin.de/saltnpepper/pepper/download/stable/Pepper_2021.03.01.zip -O Pepper.zip >&/dev/null; then \
-		unzip Pepper.zip;\
-	else \
-		echo some issue 1>&2;\
-	fi
+	! wget -nc https://korpling.german.hu-berlin.de/saltnpepper/pepper/download/stable/Pepper_2021.03.01.zip -O Pepper.zip
+	unzip Pepper.zip
 
 samples:
 	mkdir samples
