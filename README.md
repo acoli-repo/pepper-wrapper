@@ -66,3 +66,9 @@ with the following converters:
 |	ad hoc	|	`WolofImporter`	|		|
 
 Note that we extend the original Pepper with support for zip archives
+
+## Intended application
+
+The main purpose of Pepper is to produce input and merge multi-layer annotations in order to prepare their publication in ANNIS. Pepper is being maintained, but activity in the repository is low, and applications other than ANNIS are not known, so that is should be primarily used to produce multi-layer annotations. Subsequent processing of multi-layer annotations should be primarily based on PAULA, as the native format (SaltXML, a serialization of the native Pepper data model) is not well-documented. Unless this changes, the recommended output format would be PAULA. ANNIS and the older relANNIS format cannot be read with Pepper.
+
+Not all combinations of converters have been tested. If there are issues with them, please report that to the [Pepper developers](https://github.com/korpling/pepper). Make sure you update the included Pepper installation first to [the latest stable release](https://korpling.german.hu-berlin.de/saltnpepper/pepper/download/stable/). 
