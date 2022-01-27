@@ -25,7 +25,9 @@ function run_pepper {
   tgt=`realpath $tgt`
 
   for src in $@; do \
-    src=`realpath $src`
+    if [ -e $src ]; then \
+      src=`realpath $src`; \
+    fi;\
     if [ $src != $tgt ]; then \
       echo $importer $exporter $src $tgt;\
 

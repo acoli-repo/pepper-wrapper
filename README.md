@@ -66,3 +66,23 @@ with the following converters:
 |	ad hoc	|	`WolofImporter`	|		|
 
 Note that we extend the original Pepper with support for zip archives
+
+## Docker version
+
+For portability beyond Ubuntu 20.04, a `Dockerfile` is provided. However, note that this uses `bind`, so that external and internal paths needs to be distinguished.
+
+Building
+
+    $> docker build -f Dockerfile -t acoli/pepper-wrapper .
+
+Converting `./pcc2_PAULA.zip` to `./tcf/`:
+
+    $> docker run \
+       --mount type=bind,source=`realpath .`,target=/source \
+       --mount type=bind,source=`realpath ./tcf`,target=/target \
+       acoli/pepper-wrapper \
+       pepper-wrapper/convert.sh PaulaImporter TCFExporter source/pcc2_PAULA.zip target/
+
+This is equivalent to
+
+    $> bash -e ./convert.sh PaulaImporter TCFExporter ./pcc2_PAULA.zip ./tcf
