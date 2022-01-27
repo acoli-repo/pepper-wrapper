@@ -54,6 +54,9 @@ function run_pepper {
        echo 'convert '$conf'
              exit' | $pepper)
       rm $conf
+      if [ $tmp != $src ]; then
+        rm -rf $tmp;
+      fi
     fi;\
   done;
 }
