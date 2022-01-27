@@ -36,8 +36,8 @@ with the following converters:
 |	---	|	---	|	---	|
 |	Aldt	|	`AldtImporter`	|		|
 |	[ANNIS](https://corpus-tools.org/annis/)	|		|	`ANNISExporter`	|
-|	CoNLL	|	`CoNLLCorefImporter`	|	`CoNLLCorefExporter`	|
-|	CoNLL	|	`CoNLLImporter`	|	`CoNLLExporter`	|
+|	CoNLL (which format?)	|	`CoNLLCorefImporter`	|	`CoNLLCorefExporter`	|
+|	CoNLL (10 columns, but which format?)	|	`CoNLLImporter`	|	`CoNLLExporter`	|
 |	[Cora](https://github.com/comphist/cora)	|	`CoraXMLImporter`	|		|
 |	GraphViz	|		|	`DOTExporter`	|
 |	[EXMARaLDA](https://exmaralda.org/)	|	`EXMARaLDAImporter`	|	`EXMARaLDAExporter`	|
