@@ -30,7 +30,6 @@ function run_pepper {
     fi;\
     if [ $src != $tgt ]; then \
       echo $importer $exporter $src $tgt;\
-
       tmp=/tmp/`basename $src`;
       while [ -e $tmp ]; do
         tmp=$tmp.`ls $tmp* | wc -l`;
